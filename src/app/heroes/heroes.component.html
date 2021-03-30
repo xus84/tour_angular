@@ -1,0 +1,13 @@
+<h2>&#9829; The best seductors &#9829;</h2>
+
+<div class="container-selected">
+    <ul class="heroes">
+        <li
+         *ngFor="let hero of heroes" [class.selected] = "hero === selectedHero" (click)="onSelect(hero)">
+            <span class="badge">{{hero.id}}</span> - <span> {{hero.name}}</span>
+        </li>
+    </ul>
+</div>
+
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
